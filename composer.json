@@ -1,0 +1,44 @@
+{
+    "name": "bluemantis/craft-time-ago-in-words",
+    "description": "Convert a datetime to a word representation of how long ago it was",
+    "type": "craft-plugin",
+    "version": "0.0.1",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "time ago in words"
+    ],
+    "support": {
+        "docs": "https://github.com/blue-mantis/craft-time-ago-in-words/time-ago-in-words/blob/master/README.md",
+        "issues": "https://github.com/blue-mantis/craft-time-ago-in-words/time-ago-in-words/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bluemantis",
+            "homepage": "https://bluemantis.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "bluemantis\\timeagoinwords\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Time Ago In Words",
+        "handle": "time-ago-in-words",
+        "developer": "Bluemantis",
+        "developerUrl": "https://bluemantis.com",
+        "documentationUrl": "https://github.com/blue-mantis/craft-time-ago-in-words/time-ago-in-words/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/blue-mantis/craft-time-ago-in-words/time-ago-in-words/master/CHANGELOG.md",
+        "components": {
+            "timeAgoInWordsService": "bluemantis\\timeagoinwords\\services\\TimeAgoInWordsService"
+        },
+        "class": "bluemantis\\timeagoinwords\\TimeAgoInWords"
+    }
+}
