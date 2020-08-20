@@ -1,8 +1,7 @@
 # Time Ago In Words plugin for Craft CMS 3.x
 
-Convert a datetime to a word representation of how long ago it was
+Convert a datetime to a short string of how long ago it was
 
-![Screenshot](resources/img/plugin-logo.png)
 
 ## Requirements
 
@@ -18,7 +17,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require blue-mantis/craft-time-ago-in-words/time-ago-in-words
+        composer require bluemantis/craft-time-ago-in-words
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Time Ago In Words.
 
@@ -28,16 +27,29 @@ To install the plugin, follow these instructions.
 
 ## Configuring Time Ago In Words
 
--Insert text here-
+-This plugin defaults to Europe/London but can be manually set on the plugin settings page
 
 ## Using Time Ago In Words
 
--Insert text here-
+Its available as a Twig filter:
+
+    {{ entry.postDate|timeAgoInWords }}
+    
+And function:
+    
+    {{ timeAgoInWords(entry.postDate) }}
+    
+You can also convert via the variable:
+
+    {{ craft.timeAgoInWords.convert(entry.postDate) }}
+    
+And the service:
+
+    TimeAgoInWords::getInstance()->timeAgoInWordsService->timeAgoInWords($entry->postDate);
 
 ## Time Ago In Words Roadmap
 
-Some things to do, and ideas for potential features:
+* I guess it should probably default to Craft's timezone?
 
-* Release it
 
 Brought to you by [Bluemantis](https://bluemantis.com)
