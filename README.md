@@ -1,6 +1,6 @@
 # Time Ago In Words plugin for Craft CMS 3.x
 
-Convert a datetime to a short string of how long ago it was
+Convert a date to a short string of how long ago that date was
 
 
 ## Requirements
@@ -23,7 +23,7 @@ To install the plugin, follow these instructions.
 
 ## Time Ago In Words Overview
 
--Insert text here-
+- Takes a DateTime object or ISO8601 compatible string and converts it into a string representation of how long ago that date was.  ie, "5 seconds ago", "3 hours ago", "8 days ago", etc
 
 ## Configuring Time Ago In Words
 
@@ -45,7 +45,7 @@ You can also convert via the variable:
     
 And the service:
 
-    TimeAgoInWords::getInstance()->timeAgoInWordsService->timeAgoInWords($entry->postDate);
+    return TimeAgoInWords::getInstance()->timeAgoInWords->convert($dateTime);
 
 ## Time Ago In Words Roadmap
 

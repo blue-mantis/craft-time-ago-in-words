@@ -63,6 +63,6 @@ class TimeAgoInWordsTwigExtension extends AbstractExtension
      */
     public function timeAgoInWords($datetime)
     {
-        return TimeAgoInWords::getInstance()->timeAgoInWordsService->timeAgoInWords($datetime);
+        return TimeAgoInWords::getInstance()->timeAgoInWords->convert($datetime);
     }
 }

@@ -10,6 +10,6 @@ class TimeAgoInWordsVariable
 {
     public function convert($dateTime)
     {
-        return TimeAgoInWords::getInstance()->timeAgoInWordsService->timeAgoInWords($dateTime);
+        return TimeAgoInWords::getInstance()->timeAgoInWords->convert($dateTime);
     }
 }

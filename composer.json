@@ -37,7 +37,7 @@
         "documentationUrl": "https://github.com/blue-mantis/craft-time-ago-in-words/time-ago-in-words/blob/master/README.md",
         "changelogUrl": "https://raw.githubusercontent.com/blue-mantis/craft-time-ago-in-words/time-ago-in-words/master/CHANGELOG.md",
         "components": {
-            "timeAgoInWordsService": "bluemantis\\timeagoinwords\\services\\TimeAgoInWordsService"
+            "timeAgoInWordsService": "TimeAgoInWords"
         },
         "class": "bluemantis\\timeagoinwords\\TimeAgoInWords"
     }

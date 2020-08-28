@@ -11,7 +11,7 @@
 namespace bluemantis\timeagoinwords;
 
 use bluemantis\timeagoinwords\models\Settings;
-use bluemantis\timeagoinwords\services\TimeAgoInWordsService as TimeAgoInWordsServiceService;
+use bluemantis\timeagoinwords\services\TimeAgoInWords as TimeAgoInWordsServiceService;
 use bluemantis\timeagoinwords\variables\TimeAgoInWordsVariable;
 use bluemantis\timeagoinwords\twigextensions\TimeAgoInWordsTwigExtension;
 

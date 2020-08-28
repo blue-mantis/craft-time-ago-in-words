@@ -10,15 +10,21 @@
 
 namespace bluemantis\timeagoinwords\services;
 
-use bluemantis\timeagoinwords\TimeAgoInWords;
+use bluemantis\timeagoinwords\TimeAgoInWords as TimeAgoInWordsPlugin;
 use Craft;
 use craft\base\Component;
 
-class TimeAgoInWordsService extends Component
+class TimeAgoInWords extends Component
 {
-    public function timeAgoInWords($datetime) {
+    /**
+     * @param $datetime string|\DateTime
+     *
+     * @return string
+     * @throws \Exception
+     */
+    public function convert($datetime) {
 
-        $settings = TimeAgoInWords::getInstance()->getSettings();
+        $settings = TimeAgoInWordsPlugin::getInstance()->getSettings();
 
         // set timezone (default to 'Europe/London')
         $timezone = $settings->timezone ? $settings->timezone : 'Europe/London';
