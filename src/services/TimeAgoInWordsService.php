@@ -1,20 +1,12 @@
 <?php
-/**
- * Time Ago In Words plugin for Craft CMS 3.x
- *
- * Convert a datetime to a word representation of how long ago it was
- *
- * @link      https://bluemantis.com
- * @copyright Copyright (c) 2020 Bluemantis
- */
 
 namespace bluemantis\timeagoinwords\services;
 
-use bluemantis\timeagoinwords\TimeAgoInWords as TimeAgoInWordsPlugin;
+use bluemantis\timeagoinwords\TimeAgoInWords as TimeAgoInWords;
 use Craft;
 use craft\base\Component;
 
-class TimeAgoInWords extends Component
+class TimeAgoInWordsService extends Component
 {
     /**
      * @param $datetime string|\DateTime
@@ -24,7 +16,7 @@ class TimeAgoInWords extends Component
      */
     public function convert($datetime) {
 
-        $settings = TimeAgoInWordsPlugin::getInstance()->getSettings();
+        $settings = TimeAgoInWords::getInstance()->getSettings();
 
         // set timezone (default to 'Europe/London')
         $timezone = $settings->timezone ? $settings->timezone : 'Europe/London';

@@ -1,12 +1,4 @@
 <?php
-/**
- * Time Ago In Words plugin for Craft CMS 3.x
- *
- * Convert a datetime to a word representation of how long ago it was
- *
- * @link      https://bluemantis.com
- * @copyright Copyright (c) 2020 Bluemantis
- */
 
 namespace bluemantis\timeagoinwords\twigextensions;
 
@@ -18,11 +10,6 @@ use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
 
-/**
- * @author    Bluemantis
- * @package   TimeAgoInWords
- * @since     1.0.0
- */
 class TimeAgoInWordsTwigExtension extends AbstractExtension
 {
     // Public Methods

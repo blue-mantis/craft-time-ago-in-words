@@ -1,17 +1,9 @@
 <?php
-/**
- * Time Ago In Words plugin for Craft CMS 3.x
- *
- * Convert a datetime to a word representation of how long ago it was
- *
- * @link      https://bluemantis.com
- * @copyright Copyright (c) 2020 Bluemantis
- */
 
 namespace bluemantis\timeagoinwords;
 
 use bluemantis\timeagoinwords\models\Settings;
-use bluemantis\timeagoinwords\services\TimeAgoInWords as TimeAgoInWordsServiceService;
+use bluemantis\timeagoinwords\services\TimeAgoInWordsService;
 use bluemantis\timeagoinwords\variables\TimeAgoInWordsVariable;
 use bluemantis\timeagoinwords\twigextensions\TimeAgoInWordsTwigExtension;
 
@@ -23,15 +15,6 @@ use craft\web\twig\variables\CraftVariable;
 
 use yii\base\Event;
 
-/**
- * Class TimeAgoInWords
- *
- * @author    Bluemantis
- * @package   TimeAgoInWords
- * @since     1.0.0
- *
- * @property  TimeAgoInWordsServiceService $timeAgoInWordsService
- */
 class TimeAgoInWords extends Plugin
 {
     // Static Properties
@@ -72,6 +55,10 @@ class TimeAgoInWords extends Plugin
         self::$plugin = $this;
 
         Craft::$app->view->registerTwigExtension(new TimeAgoInWordsTwigExtension());
+
+        $this->setComponents([
+            'timeAgoInWords' => TimeAgoInWordsService::class,
+        ]);
 
         Event::on(
             CraftVariable::class,
