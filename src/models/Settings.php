@@ -8,7 +8,7 @@ class Settings extends Model
 {
     public $timezone = 'Europe/London';
 
-    public function rules()
+    public function rules(): array
     {
         return [
         ];
