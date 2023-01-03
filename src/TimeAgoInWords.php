@@ -8,6 +8,7 @@ use bluemantis\timeagoinwords\variables\TimeAgoInWordsVariable;
 use bluemantis\timeagoinwords\twigextensions\TimeAgoInWordsTwigExtension;
 
 use Craft;
+use craft\base\Model;
 use craft\base\Plugin;
 use craft\services\Plugins;
 use craft\events\PluginEvent;
@@ -31,17 +32,17 @@ class TimeAgoInWords extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     /**
      * @var bool
      */
-    public $hasCpSettings = true;
+    public bool $hasCpSettings = true;
 
     /**
      * @var bool
      */
-    public $hasCpSection = false;
+    public bool $hasCpSection = false;
 
     // Public Methods
     // =========================================================================
@@ -89,7 +90,7 @@ class TimeAgoInWords extends Plugin
         );
     }
 
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?Model
     {
         return new Settings();
     }
